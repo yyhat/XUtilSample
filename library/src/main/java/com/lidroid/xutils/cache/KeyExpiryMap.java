@@ -17,6 +17,7 @@ package com.lidroid.xutils.cache;
 
 import java.util.concurrent.ConcurrentHashMap;
 
+//todo 为什么要封装一层，ConcurrentHashMap已经是线程安全的了
 /**
  * Author: wyouflf
  * Date: 13-8-1
