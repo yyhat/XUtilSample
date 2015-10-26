@@ -637,7 +637,8 @@ public class DbUtils {
         String dbDir = config.getDbDir();
         if (!TextUtils.isEmpty(dbDir)) {
             File dir = new File(dbDir);
-            if (dir.exists() || dir.mkdirs()) {
+            if (dir.exists() || dir.mkdirs())
+            {
                 File dbFile = new File(dbDir, config.getDbName());
                 result = SQLiteDatabase.openOrCreateDatabase(dbFile, null);
             }

@@ -36,7 +36,6 @@ import java.io.IOException;
 import java.net.URI;
 import java.net.UnknownHostException;
 
-
 public class HttpHandler<T> extends PriorityAsyncTask<Object, Object, Void> implements RequestCallBackHandler {
 
     private final AbstractHttpClient client;
@@ -111,8 +110,8 @@ public class HttpHandler<T> extends PriorityAsyncTask<Object, Object, Void> impl
 
             boolean retry = true;
             IOException exception = null;
-            try {
                 requestMethod = request.getMethod();
+                try {
                 if (HttpUtils.sHttpCache.isEnabled(requestMethod)) {
                     String result = HttpUtils.sHttpCache.get(requestUrl);
                     if (result != null) {

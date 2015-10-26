@@ -7,6 +7,7 @@ import java.util.concurrent.atomic.AtomicInteger;
  * Author: wyouflf
  * Date: 14-5-16
  * Time: 上午11:25
+ * Note: 实际是实现类似ExecutorService的功能（线程池） anting.hu 2015-10-22
  */
 public class PriorityExecutor implements Executor {
 

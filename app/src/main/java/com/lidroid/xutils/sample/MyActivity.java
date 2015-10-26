@@ -3,8 +3,10 @@ package com.lidroid.xutils.sample;
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentTabHost;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TabHost;
 import android.widget.TextView;
@@ -42,7 +44,10 @@ public class MyActivity extends FragmentActivity {
         LogUtils.customTagPrefix = "xUtilsSample"; // 方便调试时过滤 adb logcat 输出
         LogUtils.allowI = false; //关闭 LogUtils.i(...) 的 adb log 输出
 
+
         ViewUtils.inject(this);
+
+        TestLayoutView testView = new TestLayoutView(MyActivity.this);
 
         setupTabView();
     }
